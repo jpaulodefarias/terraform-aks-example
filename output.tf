@@ -26,6 +26,14 @@
 #   value = azurerm_kubernetes_cluster.wordpress.kube_config.0.password
 # }
 
+# output "azurerm_mysql_server" {
+#   value = azurerm_mysql_server.wordpress
+# }
+
+# output "azurerm_mysql_database" {
+#   value = azurerm_mysql_database.wordpress
+# }
+
 output "ip" {
   value = kubernetes_service.wordpress.status.0.load_balancer.0.ingress.0.ip
 }
