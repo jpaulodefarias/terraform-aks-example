@@ -31,6 +31,6 @@ resource "azurerm_mysql_firewall_rule" "wordpress" {
   name                = "wordpress-mysql-firewall-rule"
   resource_group_name = azurerm_resource_group.wordpress.name
   server_name         = azurerm_mysql_server.wordpress.name
-  start_ip_address    = kubernetes_service.wordpress.status.0.load_balancer.0.ingress.0.ip
-  end_ip_address      = kubernetes_service.wordpress.status.0.load_balancer.0.ingress.0.ip
+  start_ip_address    = "0.0.0.0"
+  end_ip_address      = "0.0.0.0"
 }
