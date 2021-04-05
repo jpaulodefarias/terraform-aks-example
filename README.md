@@ -11,6 +11,10 @@ Use Terraform to provision a managed Azure Kubernetes cluster running Wordpress.
 
 With Terraform and Azure CLI properly configured, you can run:
 
+### `az login`
+
+Authenticate to your Azure account.
+
 ### `terraform init`
 
 Prepare your working directory.
