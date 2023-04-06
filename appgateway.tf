@@ -32,6 +32,11 @@ resource "azurerm_application_gateway" "wordpress" {
   location            = var.location
   resource_group_name = azurerm_resource_group.wordpress.name
 
+    identity {
+  type         = "UserAssigned"
+  identity_ids = [azurerm_user_assigned_identity.identity.id]
+  }
+
   sku {
     name     = "Standard_v2"
     tier     = "Standard_v2"

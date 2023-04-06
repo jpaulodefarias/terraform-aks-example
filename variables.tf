@@ -43,3 +43,15 @@ variable "acr_name" {
 variable "managed_identity_name" {
   default = "wordpress-identity"
 }
+variable "subscriptionId" {
+  default = "0a3905c6-df2d-41a0-8709-31cda42c661f"
+}
+variable "clientID" {
+  default = "f15c6d88-13f3-42bf-a180-267da96dab74"
+}
+variable "clientSecret" {
+  default = "WeO8Q~14zHe8bHr0Ay3MyhQcdl37ITSWd0~iDaeQ"
+}
+variable "tenantID" {
+  default = "76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61"
+}
