@@ -1,3 +1,3 @@
 output "ip" {
-  value = kubernetes_service.wordpress.status.0.load_balancer.0.ingress.0.ip
+  value = azurerm_public_ip.appgateway.ip_address
 }

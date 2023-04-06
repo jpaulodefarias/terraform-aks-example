@@ -1,0 +1,24 @@
+resource "kubernetes_ingress" "wordpress" {
+  metadata {
+    name = "wordpress-ingress"
+    annotations = {
+      "kubernetes.io/ingress.class" = "azure/application-gateway"
+      "appgw.ingress.kubernetes.io/ssl-redirect" = "false"
+    }
+  }
+
+  spec {
+    rule {
+      http {
+        path {
+          backend {
+            service_name = kubernetes_service.wordpress.metadata[0].name
+            service_port = 80
+          }
+
+          path = "/"
+        }
+      }
+    }
+  }
+}

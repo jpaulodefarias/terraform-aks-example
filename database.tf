@@ -1,6 +1,6 @@
 resource "azurerm_mysql_server" "wordpress" {
   resource_group_name = azurerm_resource_group.wordpress.name
-  name                = "wordpress-mysql-server"
+  name                = "wordpress-mysql-server-awb"
   location            = azurerm_resource_group.wordpress.location
   version             = "5.7"
 
